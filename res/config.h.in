@@ -1,0 +1,10 @@
+#ifndef __oat_web_test__
+    #define __oat_web_test__
+#include <string_view>
+namespace Project {
+    constexpr std::string_view VERSION_STRING = "@oat_web_test_VERSION_MAJOR@.@oat_web_test_VERSION_MINOR@.@oat_web_test_VERSION_PATCH@";
+    constexpr std::string_view COMPANY_NAME = "@COMPANY@";
+    constexpr std::string_view COPYRIGHT_STRING = "@COPYRIGHT@";
+    constexpr std::string_view PROJECT_NAME = "@PROJECT_NAME@";
+}
+#endif

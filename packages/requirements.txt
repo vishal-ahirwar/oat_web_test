@@ -1,0 +1,5 @@
+[requires]
+oatpp/1.3.0.latest
+[generators]
+CMakeDeps
+CMakeToolchain
