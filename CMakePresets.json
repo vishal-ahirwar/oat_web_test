@@ -1,37 +1,37 @@
 
-
 {
-  "version": 2,
+  "version": 3,
   "configurePresets": [
     {
-      "name": "default",
+      "name": "clang-posix",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build/",
       "cacheVariables": {
         "CMAKE_TOOLCHAIN_FILE": "packages/install/conan_toolchain.cmake",
-        "STATIC_LINK": false,
-        "CMAKE_BUILD_TYPE":"Release",
+        "BUILD_SHARED_LIBS": false,
+   "CRT_STATIC_LINK": false,
+       "CMAKE_BUILD_TYPE":"Release",
         "CMAKE_CXX_COMPILER":"clang++",
         "CMAKE_C_COMPILER":"clang"
       }
     },
-    {"name": "debug",
-    "inherits":"default",
+    {"name": "clang-posix-debug",
+    "inherits": "clang-posix",
     "cacheVariables": {
       "CMAKE_BUILD_TYPE":"Debug"
     }
     },
     {
-      "name": "windows",
-      "inherits": "default",
-      "cacheVariables": {
+      "name": "clang-msvc",
+      "inherits": "clang-posix",
+"cacheVariables": {
         "CMAKE_CXX_COMPILER":"clang-cl",
         "CMAKE_C_COMPILER":"clang-cl"
       }
     },
     {
-      "name": "debug-windows",
-      "inherits":"windows",
+      "name": "clang-msvc-debug",
+      "inherits": "clang-msvc",
       "cacheVariables": {
         "CMAKE_BUILD_TYPE":"Debug"
       }
