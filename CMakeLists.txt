@@ -7,4 +7,4 @@ include(cmake/config.cmake)
 #@add_find_package Warning: Do not remove this line
  find_package(oatpp)
 #@add_subproject Warning: Do not remove this line
-add_subdirectory(oat_web_test)
+add_subdirectory(apps/oat_web_test)
