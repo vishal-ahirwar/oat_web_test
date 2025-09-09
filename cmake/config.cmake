@@ -3,7 +3,7 @@
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-option(STATIC_LINK "Enable static linking" ON)
+option(STATIC_LINK "Enable static linking" OFF)
 option(ENABLE_TESTS "GTests" OFF)
 if(STATIC_LINK)
   set(BUILD_SHARED_LIBS OFF)
